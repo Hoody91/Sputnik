@@ -1,28 +1,14 @@
 extern crate inquire;
 
-
 use rand::{random, thread_rng, Rng}; 
 use strum_macros::{Display, EnumString};
 use std::str::FromStr;
 use rand_derive2::RandGen;
 use inquire::{Text, Select};
 
-
-
-
-
-
-
 #[derive(Debug, RandGen, Display)]
 enum Name {
     Akira, Miranda, Sagan, Kukai, Morelos, Chandra, Victor, Oriana, Alizee, Hitomi, Nimbus, Tranquility, Kizuna, StenSat, 
-}
-
-#[derive(Debug, RandGen, Eq, PartialEq,  Display, EnumString)]
-enum SectionName {
-    AstroScience,     Solar,       Antenna,
-    RadiationMirrors, Sleeping,    NuclearGenerator,
-    Galley,           Transponder, Tracking
 }
 
 #[derive(Debug, RandGen)]
@@ -30,6 +16,13 @@ struct Station {
     name: Name, 
     version: u8, 
     sections: Vec<Section>
+}
+
+#[derive(Debug, RandGen, Eq, PartialEq,  Display, EnumString)]
+enum SectionName {
+    AstroScience,     Solar,       Antenna,
+    RadiationMirrors, Sleeping,    NuclearGenerator,
+    Galley,           Transponder, Tracking
 }
 
 #[derive(Debug, RandGen, Eq, PartialEq)]
