@@ -1,14 +1,14 @@
 extern crate inquire;
 
-use rand::Rng;
-use rand::thread_rng;
-use strum_macros::Display;
+
+use rand::{random, thread_rng, Rng}; 
+use strum_macros::{Display, EnumString};
 use std::str::FromStr;
-use strum_macros::EnumString;
-use inquire::Text;
-use inquire::Select; 
 use rand_derive2::RandGen;
-use rand::random;
+use inquire::{Text, Select};
+
+
+
 
 
 
